@@ -1,7 +1,12 @@
-import java.util.*;
-import java.io.*;
+package d260129;
 
-public class Main {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class BOJ_1920 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
@@ -25,7 +30,7 @@ public class Main {
             int end = N - 1;
             boolean isFound = false;
 
-            while(start <= end){
+            while (start <= end) {
                 int mid = (start + end) / 2;
 
                 if (target > A[mid]) {
@@ -37,7 +42,7 @@ public class Main {
                     break;
                 }
             }
-            if(isFound) sb.append(1).append('\n');
+            if (isFound) sb.append(1).append('\n');
             else sb.append(0).append('\n');
         }
 
